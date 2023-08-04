@@ -27,9 +27,9 @@ function Products() {
     {product.map((value,index)=>{
         return(
             <>
-            <h1>{value.price},{index}</h1>
-            <img src={value.image} alt={index} />
-            <button onClick={handleClick}>Add To Cart</button>
+            <h1> ${value.price}  index is = {index}</h1>
+            <img src={value.image} alt="done ha sab"/>
+            <button onClick={(e)=> {handleClick(e,value)}}>Add To Cart</button>
 
             </>
         )
