@@ -2,6 +2,7 @@ import React,{useContext, useEffect,useState} from 'react'
 // import axios from 'axios'
 import axios from 'axios';
 import { cartContext } from '../App';
+import './Prodc.css'
 
 function Products() {
     const [product,setProduct] = useState([])
@@ -17,7 +18,8 @@ function Products() {
 
     function handleClick(e,item){
         e.preventDefault();
-        setCart([...cart],item)
+        setCart([...cart,item])
+        console.log(cart)
     }
 
 
@@ -29,6 +31,7 @@ function Products() {
             <>
             <h1> ${value.price}  index is = {index}</h1>
             <img src={value.image} alt="done ha sab"/>
+
             <button onClick={(e)=> {handleClick(e,value)}}>Add To Cart</button>
 
             </>
